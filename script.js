@@ -217,14 +217,15 @@ function tryLoadSectionPhoto(sectionSelector, bgSelector, path) {
   img.src = path;
 }
 
-// Frase: pequeño retrato circular decorativo, oculto si no existe
-function tryLoadCirclePhoto(selector, path) {
+// Frase y dress code: pequeño retrato decorativo, oculto si no existe
+function tryLoadAccentPhoto(selector, path) {
   const el = document.querySelector(selector);
   if (!el) return;
   const img = new Image();
   img.onload = () => {
     el.style.backgroundImage = `url('${path}')`;
-    el.classList.add("is-visible-photo");
+    el.style.display = "block";
+    requestAnimationFrame(() => el.classList.add("is-visible-photo"));
   };
   img.onerror = () => {};
   img.src = path;
@@ -235,7 +236,34 @@ function loadOptionalPhotos() {
   tryLoadBlendedPhoto(".countdown", "assets/countdown.jpg");
   tryLoadSectionPhoto("#ceremonia", "#ceremonia .evento__bg", "assets/ceremonia.jpg");
   tryLoadSectionPhoto("#recepcion", "#recepcion .evento__bg", "assets/recepcion.jpg");
-  tryLoadCirclePhoto(".frase__photo", "assets/frase.jpg");
+  tryLoadSectionPhoto("#itinerario", "#itinerario .itinerario__bg", "assets/itinerario.jpg");
+  tryLoadAccentPhoto(".frase__photo", "assets/frase.jpg");
+  tryLoadAccentPhoto(".dresscode__photo", "assets/vestimenta.jpg");
+}
+
+// =========================================================
+// Música de fondo (botón flotante, requiere clic del invitado)
+// =========================================================
+
+function initMusic() {
+  const audio = document.getElementById("bgMusic");
+  const btn = document.getElementById("musicToggle");
+  if (!audio || !btn) return;
+
+  audio.addEventListener("error", () => {
+    btn.style.display = "none";
+  });
+  audio.src = "assets/musica.mp3";
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play().catch(() => {});
+      btn.classList.add("is-playing");
+    } else {
+      audio.pause();
+      btn.classList.remove("is-playing");
+    }
+  });
 }
 
 // =========================================================
@@ -284,6 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderLinks();
   startCountdown();
   loadOptionalPhotos();
+  initMusic();
   initReveal();
   initProgressBar();
 });
