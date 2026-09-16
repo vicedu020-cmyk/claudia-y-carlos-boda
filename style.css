@@ -38,7 +38,7 @@ a { color: inherit; text-decoration: none; }
 
 .label {
   font-family: var(--font-caps);
-  font-size: clamp(11px, 1.2vw, 13px);
+  font-size: clamp(12px, 1.2vw, 14px);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
@@ -140,6 +140,46 @@ a { color: inherit; text-decoration: none; }
   transition: width 0.1s linear;
 }
 
+/* ---------- reproductor de música (botón flotante) ---------- */
+
+.music-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 998;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,253,250,0.5);
+  background: rgba(36, 29, 22, 0.75);
+  backdrop-filter: blur(4px);
+  color: var(--color-white);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.music-toggle:hover { transform: scale(1.06); }
+.music-toggle__icon { display: inline-block; }
+.music-toggle.is-playing .music-toggle__icon {
+  animation: musicPulse 1.6s ease-in-out infinite;
+}
+.music-toggle.is-playing {
+  box-shadow: 0 0 0 0 rgba(169,117,74,0.6);
+  animation: musicRing 1.8s ease-out infinite;
+}
+@keyframes musicPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+@keyframes musicRing {
+  0% { box-shadow: 0 0 0 0 rgba(169,117,74,0.55); }
+  70% { box-shadow: 0 0 0 12px rgba(169,117,74,0); }
+  100% { box-shadow: 0 0 0 0 rgba(169,117,74,0); }
+}
+
 /* ---------- 01 · PORTADA ---------- */
 
 .portada {
@@ -174,7 +214,7 @@ a { color: inherit; text-decoration: none; }
 
 .eyebrow {
   font-family: var(--font-caps);
-  font-size: clamp(12px, 1.6vw, 15px);
+  font-size: clamp(13px, 1.6vw, 16px);
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: rgba(255,253,250,0.85);
@@ -220,7 +260,7 @@ a { color: inherit; text-decoration: none; }
 }
 .portada__month {
   font-family: var(--font-caps);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -232,7 +272,7 @@ a { color: inherit; text-decoration: none; }
 }
 .portada__year {
   font-family: var(--font-caps);
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.35em;
 }
 
@@ -270,6 +310,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--color-bg-alt);
 }
 .frase__photo {
+  display: none;
   width: 92px;
   height: 92px;
   border-radius: 50%;
@@ -295,7 +336,7 @@ a { color: inherit; text-decoration: none; }
 .quote-text {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(22px, 3.4vw, 34px);
+  font-size: clamp(23px, 3.4vw, 35px);
   max-width: 720px;
   line-height: 1.5;
   color: var(--color-text);
@@ -385,9 +426,53 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
 }
 
+.dresscode__photo {
+  display: none;
+  width: clamp(200px, 40vw, 280px);
+  aspect-ratio: 4 / 5;
+  margin: 22px auto 0;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.dresscode__photo.is-visible-photo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---------- 06 · ITINERARIO ---------- */
 
-.itinerario { background: var(--color-bg-alt); }
+.itinerario {
+  background: var(--color-bg-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.itinerario__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.itinerario__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,16,12,0.45) 0%, rgba(20,16,12,0.68) 100%);
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.itinerario.has-photo .itinerario__bg,
+.itinerario.has-photo .itinerario__overlay {
+  opacity: 1;
+}
+.itinerario__content { position: relative; z-index: 2; }
+
 .timeline {
   list-style: none;
   display: flex;
@@ -411,6 +496,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-accent-dark);
   margin-top: 4px;
 }
+
+.itinerario.has-photo .section-title { color: var(--color-white); }
+.itinerario.has-photo .timeline .t-label { color: var(--color-white); }
+.itinerario.has-photo .timeline .t-time { color: var(--color-accent); }
+.itinerario.has-photo .divider span { background: rgba(255,253,250,0.4); }
 
 /* ---------- 07 · CUENTA REGRESIVA ---------- */
 
@@ -502,3 +592,4 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 640px) {
   .rsvp__buttons { flex-direction: column; align-items: center; }
 }
+
