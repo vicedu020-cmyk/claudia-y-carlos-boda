@@ -1,10 +1,11 @@
-Carpeta de imágenes — Invitación Claudia & Carlos
-==================================================
+Carpeta de imágenes y música — Invitación Claudia & Carlos
+===========================================================
 
-Coloca aquí las fotografías con estos nombres exactos. La página
-las detecta automáticamente; no hace falta tocar el código. Si un
+Coloca aquí los archivos con estos nombres exactos. La página los
+detecta automáticamente; no hace falta tocar el código. Si un
 archivo no existe todavía, esa sección conserva su fondo actual
-(degradado o color liso) — nada se rompe.
+(degradado o color liso) o el botón de música se oculta — nada se
+rompe.
 
 1) portada.jpg
    - Foto principal de fondo de la portada (sección 01).
@@ -13,29 +14,38 @@ archivo no existe todavía, esa sección conserva su fondo actual
 
 2) ceremonia.jpg
    - Fondo de la sección "Ceremonia".
-   - Ideal: la foto del gazebo/altar con las sillas del pasillo
-     que mandaron — encaja perfecto con esta sección.
 
 3) recepcion.jpg
    - Fondo de la sección "Recepción".
-   - Ideal: la foto oscura con el reflector dorado y la torre de
-     copas — encaja perfecto con el tono nocturno de la fiesta.
 
 4) countdown.jpg
    - Fondo de la sección "Cuenta regresiva" (se combina con el
      degradado oscuro ya existente).
-   - Ideal: cualquiera de las fotos de anillos que mandaron.
 
 5) frase.jpg
    - Retrato circular pequeño y decorativo, arriba de la frase
      bíblica (sección 02).
-   - Ideal: la foto del corazón hecho con luces cálidas.
 
-Cómo guardar las fotos que ya enviaste en el chat:
-Ábrelas, usa "Guardar imagen como..." y guárdalas en esta carpeta
-con el nombre exacto de la lista de arriba (por ejemplo
-"ceremonia.jpg"). En cuanto estén aquí, la página las usa sola.
+6) vestimenta.jpg
+   - Fotografía rectangular pequeña en la sección "Código de
+     Vestimenta" (por ejemplo, un ejemplo de outfit o paleta de
+     colores sugerida).
 
-Si más adelante quieren usar alguna de las otras fotos de anillos
-(las de blanco y negro, o las de las manos), avísame y les busco
-un lugar en el diseño.
+7) itinerario.jpg
+   - Fondo de la sección "Itinerario" (foto de ambiente, salón o
+     fiesta).
+
+8) musica.mp3
+   - Canción de fondo. Formato MP3, idealmente menos de 8-10 MB
+     para que cargue rápido en el celular de los invitados.
+   - Debe ser una canción de la que tengan los derechos de uso
+     (comprada, con licencia libre de derechos, o de su propiedad).
+   - Aparece como un botón circular flotante (♪) abajo a la
+     derecha de toda la página. Los invitados deben tocarlo para
+     que suene — los navegadores no permiten reproducir audio con
+     sonido automáticamente sin que la persona interactúe primero.
+
+Recuerda: después de guardar cualquier archivo aquí, si el sitio
+ya está publicado en GitHub Pages, debes subir también estos
+archivos nuevos al repositorio (Add file → Upload files) para que
+se vean en el enlace público.
