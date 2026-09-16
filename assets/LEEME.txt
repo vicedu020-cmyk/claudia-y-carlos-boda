@@ -1,0 +1,41 @@
+Carpeta de imágenes — Invitación Claudia & Carlos
+==================================================
+
+Coloca aquí las fotografías con estos nombres exactos. La página
+las detecta automáticamente; no hace falta tocar el código. Si un
+archivo no existe todavía, esa sección conserva su fondo actual
+(degradado o color liso) — nada se rompe.
+
+1) portada.jpg
+   - Foto principal de fondo de la portada (sección 01).
+   - Foto de los novios, orientación vertical u horizontal amplia,
+     mínimo 1600px de ancho.
+
+2) ceremonia.jpg
+   - Fondo de la sección "Ceremonia".
+   - Ideal: la foto del gazebo/altar con las sillas del pasillo
+     que mandaron — encaja perfecto con esta sección.
+
+3) recepcion.jpg
+   - Fondo de la sección "Recepción".
+   - Ideal: la foto oscura con el reflector dorado y la torre de
+     copas — encaja perfecto con el tono nocturno de la fiesta.
+
+4) countdown.jpg
+   - Fondo de la sección "Cuenta regresiva" (se combina con el
+     degradado oscuro ya existente).
+   - Ideal: cualquiera de las fotos de anillos que mandaron.
+
+5) frase.jpg
+   - Retrato circular pequeño y decorativo, arriba de la frase
+     bíblica (sección 02).
+   - Ideal: la foto del corazón hecho con luces cálidas.
+
+Cómo guardar las fotos que ya enviaste en el chat:
+Ábrelas, usa "Guardar imagen como..." y guárdalas en esta carpeta
+con el nombre exacto de la lista de arriba (por ejemplo
+"ceremonia.jpg"). En cuanto estén aquí, la página las usa sola.
+
+Si más adelante quieren usar alguna de las otras fotos de anillos
+(las de blanco y negro, o las de las manos), avísame y les busco
+un lugar en el diseño.
