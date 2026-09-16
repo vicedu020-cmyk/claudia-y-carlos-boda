@@ -16,6 +16,11 @@
 
 <div class="progress-bar" id="progressBar"></div>
 
+<audio id="bgMusic" loop preload="none"></audio>
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir música">
+  <span class="music-toggle__icon" aria-hidden="true">&#9835;</span>
+</button>
+
 <!-- ============ 01 · PORTADA ============ -->
 <section class="section portada" id="portada">
   <div class="portada__bg"></div>
@@ -82,6 +87,7 @@
   <div class="reveal">
     <h2 class="section-title">Código de Vestimenta</h2>
     <p class="dresscode__title" id="dressCodeTitle">Formal · Elegante</p>
+    <div class="dresscode__photo" aria-hidden="true"></div>
     <div class="divider"><span></span><i></i><span></span></div>
     <p class="dresscode__text" id="dressCodeText">Una noche especial merece un atuendo especial.</p>
   </div>
@@ -89,7 +95,9 @@
 
 <!-- ============ 06 · ITINERARIO ============ -->
 <section class="section itinerario" id="itinerario">
-  <div class="reveal">
+  <div class="itinerario__bg"></div>
+  <div class="itinerario__overlay"></div>
+  <div class="reveal itinerario__content">
     <h2 class="section-title">Itinerario</h2>
     <div class="divider"><span></span><i></i><span></span></div>
     <ol class="timeline" id="timelineList">
