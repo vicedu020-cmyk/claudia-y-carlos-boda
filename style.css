@@ -1,0 +1,504 @@
+/* =========================================================
+   CLAUDIA & CARLOS — Invitación de boda
+   Paleta e identidad visual propia (editorial, cálida, serif)
+   ========================================================= */
+
+:root {
+  --color-bg: #faf6f0;
+  --color-bg-alt: #f1e8dc;
+  --color-text: #2c2620;
+  --color-text-soft: #756a5e;
+  --color-accent: #a9754a;
+  --color-accent-dark: #7c5636;
+  --color-line: #cbb89a;
+  --color-white: #fffdfa;
+
+  --font-display: 'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-caps: 'Cinzel', serif;
+
+  --section-pad-y: clamp(72px, 12vh, 140px);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------- utilidades ---------- */
+
+.label {
+  font-family: var(--font-caps);
+  font-size: clamp(11px, 1.2vw, 13px);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  margin-bottom: 18px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px auto 30px;
+  width: 200px;
+}
+.divider span {
+  height: 1px;
+  flex: 1;
+  background: var(--color-line);
+}
+.divider i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 38px;
+  border: 1px solid var(--color-accent-dark);
+  color: var(--color-accent-dark);
+  font-family: var(--font-caps);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: transparent;
+  border-radius: 2px;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+.btn:hover { background: var(--color-accent-dark); color: var(--color-white); }
+
+.btn--primary { background: var(--color-accent-dark); color: var(--color-white); }
+.btn--primary:hover { background: var(--color-accent); border-color: var(--color-accent); }
+
+.btn--whatsapp {
+  border-color: #3f7a4e;
+  color: #3f7a4e;
+}
+.btn--whatsapp:hover { background: #3f7a4e; color: var(--color-white); }
+.btn--whatsapp.btn--primary {
+  background: #3f7a4e;
+  color: var(--color-white);
+}
+.btn--whatsapp.btn--primary:hover { background: #356841; border-color: #356841; }
+
+/* ---------- secciones genéricas ---------- */
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--section-pad-y) 24px;
+  position: relative;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- barra de progreso ---------- */
+
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--color-accent);
+  z-index: 999;
+  transition: width 0.1s linear;
+}
+
+/* ---------- 01 · PORTADA ---------- */
+
+.portada {
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.portada__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(169,117,74,0.35), transparent 55%),
+    radial-gradient(circle at 75% 80%, rgba(124,86,54,0.4), transparent 55%),
+    linear-gradient(160deg, #241d16 0%, #3b2c1f 45%, #55402a 100%);
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s ease;
+}
+/* Cuando script.js detecta assets/portada.jpg, la antepone a este mismo stack */
+
+.portada__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,16,12,0.35) 0%, rgba(20,16,12,0.55) 60%, rgba(20,16,12,0.75) 100%);
+}
+
+.portada__content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+.eyebrow {
+  font-family: var(--font-caps);
+  font-size: clamp(12px, 1.6vw, 15px);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255,253,250,0.85);
+}
+.eyebrow--sub { margin-bottom: 26px; opacity: 0.75; }
+
+.portada__names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 8px 0 10px;
+}
+.portada__names .name {
+  font-family: var(--font-display);
+  font-size: clamp(46px, 9vw, 96px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+.portada__names .amp {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(24px, 3.6vw, 36px);
+  color: var(--color-accent);
+  line-height: 1;
+  margin: 2px 0;
+}
+
+.honor {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  color: rgba(255,253,250,0.88);
+  margin-bottom: 6px;
+}
+
+.portada__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 28px;
+  letter-spacing: 0.2em;
+}
+.portada__month {
+  font-family: var(--font-caps);
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.portada__day {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 88px);
+  line-height: 1.1;
+}
+.portada__year {
+  font-family: var(--font-caps);
+  font-size: 15px;
+  letter-spacing: 0.35em;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 22px;
+  height: 36px;
+  border: 1px solid rgba(255,253,250,0.6);
+  border-radius: 12px;
+}
+.scroll-cue span {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: var(--color-white);
+  border-radius: 2px;
+  animation: scrollCue 1.8s ease infinite;
+}
+@keyframes scrollCue {
+  0% { opacity: 1; top: 6px; }
+  70% { opacity: 0; top: 18px; }
+  100% { opacity: 0; top: 6px; }
+}
+
+/* ---------- 02 · FRASE ---------- */
+
+.frase {
+  background: var(--color-bg-alt);
+}
+.frase__photo {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  margin: 0 auto 26px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--color-line);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.frase__photo.is-visible-photo {
+  opacity: 1;
+  transform: scale(1);
+}
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 90px;
+  color: var(--color-accent);
+  line-height: 0.4;
+  margin-bottom: 20px;
+}
+.quote-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(22px, 3.4vw, 34px);
+  max-width: 720px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+.quote-ref {
+  margin-top: 18px;
+  font-family: var(--font-caps);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
+
+/* ---------- 03/04 · CEREMONIA / RECEPCIÓN ---------- */
+
+.evento {
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+.evento--alt { background: var(--color-bg-alt); }
+
+.evento__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.evento__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,16,12,0.4) 0%, rgba(20,16,12,0.62) 100%);
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.evento.has-photo .evento__bg,
+.evento.has-photo .evento__overlay {
+  opacity: 1;
+}
+.evento__content { position: relative; z-index: 2; }
+
+.evento__place {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 14px 0 8px;
+  max-width: 620px;
+}
+.evento__time {
+  font-family: var(--font-caps);
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-soft);
+  margin-bottom: 26px;
+}
+
+.evento.has-photo .label { color: var(--color-accent); }
+.evento.has-photo .evento__place,
+.evento.has-photo .evento__time { color: var(--color-white); }
+.evento.has-photo .evento__time { color: rgba(255,253,250,0.8); }
+.evento.has-photo .btn {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+.evento.has-photo .btn:hover {
+  background: var(--color-white);
+  color: var(--color-accent-dark);
+}
+
+/* ---------- 05 · CÓDIGO DE VESTIMENTA ---------- */
+
+.dresscode { background: var(--color-bg); }
+.dresscode__title {
+  font-family: var(--font-caps);
+  font-size: clamp(14px, 1.8vw, 17px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+.dresscode__text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--color-text-soft);
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* ---------- 06 · ITINERARIO ---------- */
+
+.itinerario { background: var(--color-bg-alt); }
+.timeline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 20px;
+}
+.timeline li {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.6vw, 26px);
+}
+.timeline .t-label {
+  display: block;
+  color: var(--color-text);
+}
+.timeline .t-time {
+  display: block;
+  font-family: var(--font-caps);
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--color-accent-dark);
+  margin-top: 4px;
+}
+
+/* ---------- 07 · CUENTA REGRESIVA ---------- */
+
+.countdown {
+  background: linear-gradient(160deg, #241d16 0%, #3b2c1f 55%, #55402a 100%);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  color: var(--color-white);
+}
+.countdown .label { color: var(--color-accent); }
+.countdown .section-title { color: var(--color-white); }
+.countdown__grid {
+  display: flex;
+  gap: clamp(14px, 3vw, 34px);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 76px;
+}
+.countdown__value {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6vw, 56px);
+  line-height: 1;
+}
+.countdown__label {
+  margin-top: 8px;
+  font-family: var(--font-caps);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,253,250,0.7);
+}
+
+/* ---------- 08 · FOTOS ---------- */
+
+.fotos { background: var(--color-bg-alt); }
+.fotos__text {
+  font-size: clamp(17px, 2.2vw, 20px);
+  color: var(--color-text-soft);
+  max-width: 460px;
+  margin: 0 auto 10px;
+}
+
+/* ---------- 09 · RSVP ---------- */
+
+.rsvp { background: var(--color-bg); }
+.rsvp__text {
+  font-size: clamp(17px, 2.2vw, 20px);
+  color: var(--color-text-soft);
+  max-width: 460px;
+  margin: 0 auto 26px;
+  line-height: 1.6;
+}
+.rsvp__buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  background: #241d16;
+  color: rgba(255,253,250,0.75);
+  text-align: center;
+  padding: 50px 24px 40px;
+}
+.footer__monogram {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 28px;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+.footer__text {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 640px) {
+  .rsvp__buttons { flex-direction: column; align-items: center; }
+}

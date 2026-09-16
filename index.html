@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claudia & Carlos · 10.10.2026</title>
+<meta name="description" content="Nos casamos. Te invitamos a celebrar con nosotros.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============ 01 · PORTADA ============ -->
+<section class="section portada" id="portada">
+  <div class="portada__bg"></div>
+  <div class="portada__overlay"></div>
+  <div class="portada__content reveal">
+    <p class="eyebrow">Hemos decidido decir sí</p>
+    <p class="eyebrow eyebrow--sub">para toda la vida</p>
+
+    <div class="portada__names">
+      <span class="name">Claudia</span>
+      <span class="amp">&amp;</span>
+      <span class="name">Carlos</span>
+    </div>
+
+    <div class="divider"><span></span><i></i><span></span></div>
+
+    <p class="honor">Tenemos el honor de invitarte a<br>celebrar nuestra unión</p>
+
+    <div class="portada__date">
+      <span class="portada__month">Octubre</span>
+      <span class="portada__day">10</span>
+      <span class="portada__year">2026</span>
+    </div>
+  </div>
+  <a href="#frase" class="scroll-cue" aria-label="Desplázate para continuar"><span></span></a>
+</section>
+
+<!-- ============ 02 · FRASE ============ -->
+<section class="section frase" id="frase">
+  <div class="reveal">
+    <div class="frase__photo" aria-hidden="true"></div>
+    <p class="quote-mark">&ldquo;</p>
+    <p class="quote-text" id="quoteText">Por tanto, lo que Dios ha unido, que no lo separe el hombre.</p>
+    <p class="quote-ref" id="quoteRef">Mateo 19:6</p>
+  </div>
+</section>
+
+<!-- ============ 03 · CEREMONIA ============ -->
+<section class="section evento" id="ceremonia">
+  <div class="evento__bg"></div>
+  <div class="evento__overlay"></div>
+  <div class="reveal evento__content">
+    <p class="label">Ceremonia</p>
+    <h2 class="evento__place" id="ceremoniaLugar">Capilla de Nuestra Señora de la Merced de Sarco</h2>
+    <p class="evento__time" id="ceremoniaHora">3:00 PM</p>
+    <a class="btn" id="ceremoniaMapa" href="#" target="_blank" rel="noopener">Ver ubicación</a>
+  </div>
+</section>
+
+<!-- ============ 04 · RECEPCIÓN ============ -->
+<section class="section evento evento--alt" id="recepcion">
+  <div class="evento__bg"></div>
+  <div class="evento__overlay"></div>
+  <div class="reveal evento__content">
+    <p class="label">Recepción</p>
+    <h2 class="evento__place" id="recepcionLugar">Pandora Salón de Eventos</h2>
+    <p class="evento__time" id="recepcionHora">5:00 PM</p>
+    <a class="btn" id="recepcionMapa" href="#" target="_blank" rel="noopener">Ver ubicación</a>
+  </div>
+</section>
+
+<!-- ============ 05 · CÓDIGO DE VESTIMENTA ============ -->
+<section class="section dresscode" id="dresscode">
+  <div class="reveal">
+    <h2 class="section-title">Código de Vestimenta</h2>
+    <p class="dresscode__title" id="dressCodeTitle">Formal · Elegante</p>
+    <div class="divider"><span></span><i></i><span></span></div>
+    <p class="dresscode__text" id="dressCodeText">Una noche especial merece un atuendo especial.</p>
+  </div>
+</section>
+
+<!-- ============ 06 · ITINERARIO ============ -->
+<section class="section itinerario" id="itinerario">
+  <div class="reveal">
+    <h2 class="section-title">Itinerario</h2>
+    <div class="divider"><span></span><i></i><span></span></div>
+    <ol class="timeline" id="timelineList">
+      <!-- generado por script.js -->
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 07 · CUENTA REGRESIVA ============ -->
+<section class="section countdown" id="countdown">
+  <div class="reveal">
+    <p class="label">¡Prepárate!</p>
+    <h2 class="section-title">Nos vemos en</h2>
+    <div class="countdown__grid" id="countdownGrid">
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cdDays">00</span>
+        <span class="countdown__label">Días</span>
+      </div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cdHours">00</span>
+        <span class="countdown__label">Hrs.</span>
+      </div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cdMinutes">00</span>
+        <span class="countdown__label">Min.</span>
+      </div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cdSeconds">00</span>
+        <span class="countdown__label">Seg.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 · COMPARTE FOTOS ============ -->
+<section class="section fotos" id="fotos">
+  <div class="reveal">
+    <h2 class="section-title">Comparte tus fotos</h2>
+    <p class="fotos__text">Te invitamos a compartir tus fotografías de nuestra boda.</p>
+    <a class="btn" id="fotosBtn" href="#">Compartir fotos</a>
+  </div>
+</section>
+
+<!-- ============ 09 · CONFIRMAR ASISTENCIA ============ -->
+<section class="section rsvp" id="rsvp">
+  <div class="reveal">
+    <h2 class="section-title">Confirma tu asistencia</h2>
+    <p class="rsvp__text">
+      Será una alegría para nosotros contar contigo<br>
+      en este día tan especial.
+    </p>
+    <div class="rsvp__buttons">
+      <a class="btn btn--whatsapp btn--primary" id="rsvpWhatsappBtn" href="#" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="footer__monogram">C&nbsp;&amp;&nbsp;C</p>
+  <p class="footer__text">Con todo nuestro cariño, gracias por ser parte de este día.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
