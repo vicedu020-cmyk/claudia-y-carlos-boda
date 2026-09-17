@@ -38,7 +38,7 @@ a { color: inherit; text-decoration: none; }
 
 .label {
   font-family: var(--font-caps);
-  font-size: clamp(14px, 1.4vw, 16px);
+  font-size: clamp(17px, 1.6vw, 19px);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
@@ -46,7 +46,7 @@ a { color: inherit; text-decoration: none; }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(31px, 4.2vw, 45px);
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--color-text);
@@ -82,7 +82,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--color-accent-dark);
   color: var(--color-accent-dark);
   font-family: var(--font-caps);
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   background: transparent;
@@ -214,7 +214,7 @@ a { color: inherit; text-decoration: none; }
 
 .eyebrow {
   font-family: var(--font-caps);
-  font-size: clamp(15px, 1.8vw, 18px);
+  font-size: clamp(18px, 2vw, 21px);
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: rgba(255,253,250,0.9);
@@ -232,7 +232,7 @@ a { color: inherit; text-decoration: none; }
 }
 .portada__names .name {
   font-family: var(--font-display);
-  font-size: clamp(46px, 9vw, 96px);
+  font-size: clamp(49px, 9.2vw, 99px);
   font-weight: 500;
   line-height: 1.1;
   text-shadow: 0 2px 14px rgba(0,0,0,0.55);
@@ -240,7 +240,7 @@ a { color: inherit; text-decoration: none; }
 .portada__names .amp {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(24px, 3.6vw, 36px);
+  font-size: clamp(27px, 3.8vw, 39px);
   color: var(--color-accent);
   line-height: 1;
   margin: 2px 0;
@@ -248,7 +248,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .honor {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(19px, 2.2vw, 23px);
   line-height: 1.6;
   color: rgba(255,253,250,0.92);
   margin-bottom: 6px;
@@ -264,7 +264,7 @@ a { color: inherit; text-decoration: none; }
 }
 .portada__month {
   font-family: var(--font-caps);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.4em;
   text-transform: uppercase;
@@ -273,13 +273,13 @@ a { color: inherit; text-decoration: none; }
 }
 .portada__day {
   font-family: var(--font-display);
-  font-size: clamp(56px, 10vw, 88px);
+  font-size: clamp(59px, 10.2vw, 91px);
   line-height: 1.1;
   text-shadow: 0 2px 14px rgba(0,0,0,0.55);
 }
 .portada__year {
   font-family: var(--font-caps);
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 0.35em;
   text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
@@ -336,7 +336,7 @@ a { color: inherit; text-decoration: none; }
 }
 .quote-mark {
   font-family: var(--font-display);
-  font-size: 90px;
+  font-size: 93px;
   color: var(--color-accent);
   line-height: 0.4;
   margin-bottom: 20px;
@@ -344,7 +344,7 @@ a { color: inherit; text-decoration: none; }
 .quote-text {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(22px, 3.4vw, 34px);
+  font-size: clamp(25px, 3.6vw, 37px);
   max-width: 720px;
   line-height: 1.5;
   color: var(--color-text);
@@ -352,13 +352,31 @@ a { color: inherit; text-decoration: none; }
 .quote-ref {
   margin-top: 18px;
   font-family: var(--font-caps);
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-text-soft);
 }
 
-/* ---------- 03/04 · CEREMONIA / RECEPCIÓN ---------- */
+/* ---------- 03 · PADRES ---------- */
+
+.padres { background: var(--color-bg-alt); }
+.padres__grid {
+  display: flex;
+  gap: clamp(30px, 8vw, 100px);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.padres__col { min-width: 220px; }
+.padres__name {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.8vw, 29px);
+  margin-top: 10px;
+  color: var(--color-text);
+}
+
+/* ---------- 04/05 · CEREMONIA / RECEPCIÓN ---------- */
 
 .evento {
   background: var(--color-bg);
@@ -390,13 +408,13 @@ a { color: inherit; text-decoration: none; }
 
 .evento__place {
   font-family: var(--font-display);
-  font-size: clamp(26px, 4vw, 38px);
+  font-size: clamp(29px, 4.2vw, 41px);
   margin: 14px 0 8px;
   max-width: 620px;
 }
 .evento__time {
   font-family: var(--font-caps);
-  font-size: 18px;
+  font-size: 21px;
   letter-spacing: 0.2em;
   color: var(--color-text-soft);
   margin-bottom: 26px;
@@ -422,12 +440,12 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-accent-dark);
 }
 
-/* ---------- 05 · CÓDIGO DE VESTIMENTA ---------- */
+/* ---------- 06 · CÓDIGO DE VESTIMENTA ---------- */
 
 .dresscode { background: var(--color-bg); }
 .dresscode__title {
   font-family: var(--font-caps);
-  font-size: clamp(16px, 2vw, 19px);
+  font-size: clamp(19px, 2.2vw, 22px);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
@@ -435,7 +453,7 @@ a { color: inherit; text-decoration: none; }
 .dresscode__text {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(18px, 2.4vw, 22px);
+  font-size: clamp(21px, 2.6vw, 25px);
   color: var(--color-text-soft);
   max-width: 460px;
   margin: 0 auto;
@@ -459,7 +477,7 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(0);
 }
 
-/* ---------- 06 · ITINERARIO ---------- */
+/* ---------- 07 · ITINERARIO ---------- */
 
 .itinerario {
   background: var(--color-bg-alt);
@@ -497,7 +515,7 @@ a { color: inherit; text-decoration: none; }
 }
 .timeline li {
   font-family: var(--font-display);
-  font-size: clamp(20px, 2.6vw, 26px);
+  font-size: clamp(23px, 2.8vw, 29px);
 }
 .timeline .t-label {
   display: block;
@@ -506,7 +524,7 @@ a { color: inherit; text-decoration: none; }
 .timeline .t-time {
   display: block;
   font-family: var(--font-caps);
-  font-size: 16px;
+  font-size: 19px;
   letter-spacing: 0.25em;
   color: var(--color-accent-dark);
   margin-top: 4px;
@@ -526,7 +544,7 @@ a { color: inherit; text-decoration: none; }
 }
 .itinerario.has-photo .divider span { background: rgba(255,253,250,0.4); }
 
-/* ---------- 07 · CUENTA REGRESIVA ---------- */
+/* ---------- 08 · CUENTA REGRESIVA ---------- */
 
 .countdown {
   background: linear-gradient(160deg, #241d16 0%, #3b2c1f 55%, #55402a 100%);
@@ -558,35 +576,35 @@ a { color: inherit; text-decoration: none; }
 }
 .countdown__value {
   font-family: var(--font-display);
-  font-size: clamp(38px, 6vw, 56px);
+  font-size: clamp(41px, 6.2vw, 59px);
   line-height: 1;
   text-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
 .countdown__label {
   margin-top: 8px;
   font-family: var(--font-caps);
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255,253,250,0.8);
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-/* ---------- 08 · FOTOS ---------- */
+/* ---------- 09 · FOTOS ---------- */
 
 .fotos { background: var(--color-bg-alt); }
 .fotos__text {
-  font-size: clamp(17px, 2.2vw, 20px);
+  font-size: clamp(20px, 2.4vw, 23px);
   color: var(--color-text-soft);
   max-width: 460px;
   margin: 0 auto 10px;
 }
 
-/* ---------- 09 · RSVP ---------- */
+/* ---------- 10 · RSVP ---------- */
 
 .rsvp { background: var(--color-bg); }
 .rsvp__text {
-  font-size: clamp(17px, 2.2vw, 20px);
+  font-size: clamp(20px, 2.4vw, 23px);
   color: var(--color-text-soft);
   max-width: 460px;
   margin: 0 auto 26px;
@@ -610,12 +628,12 @@ a { color: inherit; text-decoration: none; }
 .footer__monogram {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 28px;
+  font-size: 31px;
   color: var(--color-accent);
   margin-bottom: 10px;
 }
 .footer__text {
-  font-size: 16px;
+  font-size: 19px;
   letter-spacing: 0.03em;
 }
 
